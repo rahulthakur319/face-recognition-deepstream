@@ -26,6 +26,21 @@ Deepstream docker is more recommended.
 + [retinaface](https://github.com/biubug6/Pytorch_Retinaface)
 + [arcface](https://github.com/deepinsight/insightface/releases/tag/v0.7)
 
+## Setup
+
+1. Initialize the `gst-nvinfer-custom` submodule:
+
+   ```bash
+   git submodule update --init
+   ```
+
+2. Download or convert the detection and recognition models to TensorRT
+   engines (`.engine`/`.trt`). Detection models are placed under
+   `models/retinaface` or `models/yolov8n_face` and the recognition model
+   under `models/arcface`. The config files in `config/` reference these
+   paths.
+
+
 ## Alignment
 
 [gst-nvinfer-custom](https://github.com/zhouyuchong/gst-nvinfer-custom)
